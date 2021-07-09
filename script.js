@@ -9,6 +9,12 @@ const students = [{
     age: 20
 }];
 
+const wait = (time) => {
+    return new Promise((resolve) => {
+        setTimeout(resolve,time)
+    });
+}
+
 function displayTable(data) {
 
     let table = document.getElementById('presidents');
@@ -65,6 +71,5 @@ function averageOfData(data) {
 displayTable(students);
 
 const handleClick = () => {
-    console.log("Average : ",averageOfData(students));
-    document.getElementById('avgResult').innerHTML = averageOfData(students);
+    console.log(averageOfData(students));
 }
